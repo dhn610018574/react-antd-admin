@@ -28,11 +28,20 @@ export default (props) => {
         </SubMenu>
       }
       return <Menu.Item key={item.key} title={item.label}>
-        <span>
-          <Link to={item.path}>
-            {item.icon}
-            <span>{item.label}</span>
-          </Link>
+        <span style={{ height: '100%', width: '100%', display: 'block' }}>
+          {
+            item.path ?
+              <Link to={item.path} style={{ height: '100%', width: '100%', display: 'block' }}>
+                {item.icon}
+                <span>{item.label}</span>
+              </Link>
+              :
+              <>
+                {item.icon}
+                <span>{item.label}</span>
+              </>
+          }
+
         </span>
       </Menu.Item>
     })

@@ -42,7 +42,19 @@ export default [
         key: '1-1',
         icon: <FireTwoTone />,
         label: 'ant-1',
-        path: '/demo'
+        path: '/demo',
+        subMenu: [{
+          key: '1-1-1',
+          icon: <FireTwoTone />,
+          label: 'ant-1-1',
+          path: '/demo-1'
+        }]
+      },
+      {
+        key: '1-2',
+        icon: <FireTwoTone />,
+        label: 'ant-2',
+        path: '/demo2'
       }
     ]
   },
@@ -51,11 +63,13 @@ export default [
     icon: <LikeTwoTone />,
     label: '可视化图表',
     path: '/adf',
+    subMenu: []
   },
   {
     key: 3,
     icon: <RocketTwoTone />,
-    label: 'react-router'
+    label: 'react-router',
+    path: '/react-router'
   },
   {
     key: 4,
